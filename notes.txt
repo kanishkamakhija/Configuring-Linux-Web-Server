@@ -1,0 +1,50 @@
+COMMANDS
+
+
+ls - list al the files in a folder
+curl Url -o xyz.zip - download a file from the web.
+date - Wed Aug 16 12:47:36 UTC 2017
+host udacity.com -udacity.com has address 45.79.141.183
+udacity.com mail is handled by 30 aspmx2.googlemail.com.
+udacity.com mail is handled by 30 aspmx3.googlemail.com.
+udacity.com mail is handled by 10 aspmx.l.google.com.
+udacity.com mail is handled by 20 alt1.aspmx.l.google.com.
+udacity.com mail is handled by 20 alt2.aspmx.l.google.com.
+echo you rock - you rock
+history- hostory of all commands
+expr 2 + 2 - 4
+uname - Linux
+bash --version - GNU bash, version 4.3.48(1)-release (i686-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+hostname - ubuntu-xenial
+rm filename.txt - removes a file from the folder
+os.remove("filename.txt") - in python to remove file
+uptime -13:12:04 up  1:20,  1 user,  load average: 0.00, 0.00, 0.00
+host lwn.net
+cat file1.txt file2.txt/ cat file1.txt - concatenate
+tab - to autocomplete file name or command
+wc notes.txt - 29  183 1190 notes.txt / lines words bytes
+diff f1.txt f2.txt - compares and show how files are diff
+cowsay hello world - draws a cow and at top displays heelo world
+cowsay -e ^^ hello again - replaces eyes with ^^
+man cowsay - every cmnd come with a manual so its a manpage cmnd.
+man ls - manual of ls cmnd
+ls -a/--all - to list dot files also
+list -l -file name, modification time nd size of file nd directory.
+rm -rf - removes all in ur linux file system that user has access to. r for recursive and f for force
+ping ip add - to check another sys is alive. 8.8.8.8 dns name of google.
+sort enter then input list of names and then ctrl+d to display sorted list/
+less file.txt
+nano file.txt
+
+sudo passwd -e student
+sudo adduser username - to add new user
+login as a new user - ssh student@127.0.0.1 -p 2222
+sudo cat /etc/passwd
+sudo passwd -e student - force expire the paswd
+sudo passwd student - reset passwd
+106.192.156.84
