@@ -62,7 +62,7 @@ Linux server into the secure and efficient web application host your application
 * `mkdir .ssh`
 * `touch .ssh/authorized_keys`
 * Get the ssh-key generated on localhost by copying the key from the file on your local machine: `cat .ssh/fileName.pub`
-* Paste this copied ssh-key in the authorized_keys by : `nano /home/grader/.ssh/authorized_keys` and save the file in grader user.
+   1. Paste this copied ssh-key in the authorized_keys by : `nano /home/grader/.ssh/authorized_keys` & save the file in grader user.
 * Add permissions to the .ssh directory by `chmod 700 .ssh` and to the authorized_keys file by `chmod 644 .ssh/authorized_keys`
 * Restart the service :`sudo service ssh restart`
 
