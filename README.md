@@ -128,9 +128,8 @@ Linux server into the secure and efficient web application host your application
 
 # Editing the virtual file
 * `sudo nano /etc/apache2/sites-available/000-default.conf`
-    
-    and add the following content:
-    
+  and add the following content:
+  
   ```
   <VirtualHost *:80>
     ServerName XX.XX.XX.XX
@@ -145,19 +144,16 @@ Linux server into the secure and efficient web application host your application
         Order allow,deny
         Allow from all
     </Directory>
- </VirtualHost>
+  </VirtualHost>
  
- ```
+  ```
  
- * ` sudo service apache2 restart `
-
+* `sudo service apache2 restart`
 
 # Creating database and adding dumps to it
-
 * `cd /var/www/catalog`
 * `python database_setup.py`
 * `python lotsofmenu.py`    
 
 # Start the apache2 server
-
 * `sudo service apache2 start`
