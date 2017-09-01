@@ -42,15 +42,17 @@ Linux server into the secure and efficient web application host your application
 * `sudo pip install httplib2 oauth2client sqlalchemy psycopg2 sqlalchemy_utils`
 * `sudo pip install requests`
 
+# Logging in as a root user
+* Download the public key from your aws account.
+* Log in as root by copying the command from console of your aws instance:
+  `ssh -i "aws_key.pem" ubuntu@ec2-52-15-235-1.us-east-2.compute.amazonaws.com`
+
 # Creating a new user
 * `sudo adduser grader`
 
 # Giving sudoers access to the grader
 * `sudo nano /etc/sudoers.d/grader`
 * Add this line: `grader ALL=(ALL) NOPASSWD:ALL` and save the file
-
-# Logging in as a root user
-* `ssh grader@x.x.x.x -p 2222 -i ~/.ssh/fileName`
 
 # Generating encryption key pair
 * Generate key on you local machine by:
@@ -73,7 +75,7 @@ Linux server into the secure and efficient web application host your application
 
 # Changing ssh port
 * `sudo nano /etc/ssh/sshd_config`
-* Search for the line of port no and change it from 22 2200
+* Search for the line of port no and change it from 22 to 2200
 * `sudo service ssh restart`
 
 # Disabling root login
@@ -112,7 +114,8 @@ Linux server into the secure and efficient web application host your application
 * `EXIT;` //Exit from postgres and go back to grader
 
 # Changing FLask application database connections
-* engine = create_engine('postgresql://<databaseName>:<password>@localhost/<username>') , changes made in main .py file also.
+* engine = create_engine('postgresql://<databaseName>:<password>@localhost/<username>')
+* make the similar change in main ".py" file and also in the dump database file.
 
 # CLoning the Item-Catalog App
 * `sudo mkdir /var/www/catalog`
@@ -122,9 +125,9 @@ Linux server into the secure and efficient web application host your application
     `import sys
     import logging
     logging.basicConfig(stream=sys.stderr)
-    sys.path.insert(0, "/var/www/catalog/")
+    sys.path.insert(0, "/var/www/catalog/")`
 
-    from <filename> import app as application`
+    `from <filename> import app as application`
 
 # Editing the virtual file
 * `sudo nano /etc/apache2/sites-available/000-default.conf`
@@ -148,3 +151,6 @@ Linux server into the secure and efficient web application host your application
 # Creating database and adding dumps to it
 * `python database_setup.py`
 * `python lotsofmenu.py`    
+
+# Start the apache2 server
+* `sudo service apache2 start`
