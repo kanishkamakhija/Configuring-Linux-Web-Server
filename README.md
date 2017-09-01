@@ -29,7 +29,7 @@ Linux server into the secure and efficient web application host your application
 
 1. Apache2
 * `sudo apt-get install apache2 libapache2-mod-wsgi git`
-* `sudo a2enmod wsgi`
+* Enable mod_wsgi: `sudo a2enmod wsgi`
 
 3. Postgresql
 * `sudo apt-get install libpq-dev python-dev`
