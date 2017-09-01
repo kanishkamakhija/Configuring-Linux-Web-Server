@@ -17,6 +17,10 @@ Linux server into the secure and efficient web application host your application
 * create an account in aws here []
 * Mark down the public Ip address from console of the instance created
 
+# Getting into VM environment
+* Launch vagrant machine by `vagrant up`
+* Log in through ssh by `vagrant ssh`
+
 # Upgrading and Updating the available package
 * sudo apt-get update
 * sudo apt-get upgrade
