@@ -114,6 +114,7 @@ Linux server into the secure and efficient web application host your application
 * make the similar change in main ".py" file and also in the dump database file.
 
 # CLoning the Item-Catalog App
+
 * `sudo mkdir /var/www/catalog`
 * `sudo chown -R grader:grader /var/www/catalog`
 * `git clone https://github.com/username/project_name.git catalog`
@@ -148,12 +149,15 @@ Linux server into the secure and efficient web application host your application
  
  ```
  
- * `sudo service apache2 restart`
+ * ` sudo service apache2 restart `
+
 
 # Creating database and adding dumps to it
+
 * `cd /var/www/catalog`
 * `python database_setup.py`
 * `python lotsofmenu.py`    
 
 # Start the apache2 server
+
 * `sudo service apache2 start`
