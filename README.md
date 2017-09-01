@@ -128,7 +128,8 @@ Linux server into the secure and efficient web application host your application
 # Editing the virtual file
 * `sudo nano /etc/apache2/sites-available/000-default.conf`
     and add the following content:
-  """<VirtualHost *:80>
+  ```
+  <VirtualHost *:80>
     ServerName XX.XX.XX.XX
     ServerAdmin kanishkamakhija007@gmail.com
     WSGIScriptAlias / /var/www/catalog/<filename.wsgi>
@@ -141,7 +142,8 @@ Linux server into the secure and efficient web application host your application
         Order allow,deny
         Allow from all
     </Directory>
- </VirtualHost>"""
+ </VirtualHost>
+ ```
  * `sudo service apache2 restart`
 
 # Creating database and adding dumps to it
