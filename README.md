@@ -156,4 +156,4 @@ Linux server into the secure and efficient web application host your application
 * `python lotsofmenu.py`    
 
 # Start the apache2 server
-* `sudo service apache2 start`
+* `sudo service apache2 restart`
