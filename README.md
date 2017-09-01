@@ -17,9 +17,10 @@ Linux server into the secure and efficient web application host your application
 * create an account in aws here []
 * Mark down the public Ip address from console of the instance created
 
-# Getting into VM environment
-* Launch vagrant machine by `vagrant up`
-* Log in through ssh by `vagrant ssh`
+# Logging in as a dafault user
+* Download the public key from your aws account.
+* Log in as root by copying the command from console of your aws instance:
+  `ssh -i "aws_key.pem" ubuntu@ec2-52-15-235-1.us-east-2.compute.amazonaws.com`
 
 # Upgrading and Updating the available package
 * sudo apt-get update
@@ -41,11 +42,6 @@ Linux server into the secure and efficient web application host your application
 * `sudo pip install Flask`
 * `sudo pip install httplib2 oauth2client sqlalchemy psycopg2 sqlalchemy_utils`
 * `sudo pip install requests`
-
-# Logging in as a root user
-* Download the public key from your aws account.
-* Log in as root by copying the command from console of your aws instance:
-  `ssh -i "aws_key.pem" ubuntu@ec2-52-15-235-1.us-east-2.compute.amazonaws.com`
 
 # Creating a new user
 * `sudo adduser grader`
@@ -132,7 +128,7 @@ Linux server into the secure and efficient web application host your application
 # Editing the virtual file
 * `sudo nano /etc/apache2/sites-available/000-default.conf`
     and add the following content:
-  `<VirtualHost *:80>
+  """<VirtualHost *:80>
     ServerName XX.XX.XX.XX
     ServerAdmin kanishkamakhija007@gmail.com
     WSGIScriptAlias / /var/www/catalog/<filename.wsgi>
@@ -145,10 +141,11 @@ Linux server into the secure and efficient web application host your application
         Order allow,deny
         Allow from all
     </Directory>
- </VirtualHost>`
+ </VirtualHost>"""
  * `sudo service apache2 restart`
 
 # Creating database and adding dumps to it
+* `cd /var/www/catalog`
 * `python database_setup.py`
 * `python lotsofmenu.py`    
 
