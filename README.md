@@ -23,8 +23,8 @@ Linux server into the secure and efficient web application host your application
   `ssh -i "aws_key.pem" ubuntu@ec2-52-15-235-1.us-east-2.compute.amazonaws.com`
 
 # Upgrading and Updating the available package
-* sudo apt-get update
-* sudo apt-get upgrade
+* `sudo apt-get update`
+* `sudo apt-get upgrade`
 
 # Downloading Apache2, Git, Postgres, mod-wsgi
 
@@ -57,16 +57,23 @@ Linux server into the secure and efficient web application host your application
 * Other fields are optional.
 
 # Installing public key
-* `mkdir .ssh`
-* `touch .ssh/authorized_keys`
-* Get the ssh-key generated on localhost by copying the key from the file on your local machine: `cat .ssh/fileName.pub`
-   1. Paste this copied ssh-key in the authorized_keys by : `nano /home/grader/.ssh/authorized_keys` & save the file in grader user.
-* Add permissions to the .ssh directory by `chmod 700 .ssh` and to the authorized_keys file by `chmod 644 .ssh/authorized_keys`
+* Get the ssh-key generated from localhost from the file: `cat .ssh/fileName.pub`
+* Paste this copied ssh-key in the authorized_keys by : 
+  1. `/home/grader/mkdir .ssh`
+  2. `/home/grader/.ssh/touch authorized_keys`
+  3. `nano /home/grader/.ssh/authorized_keys` & paste & save the file in grader user.
+* Add permissions to the .ssh directory by `chmod 700 .ssh` 
+  and to the authorized_keys file by `chmod 644 .ssh/authorized_keys`
 * Restart the service :`sudo service ssh restart`
+
+# Log in as a grader user
+* `ssh -i ~/.ssh/fileName grader@52.15.235.1 -p 2200
+
 
 # Forcing key based authentication
 * `sudo nano /etc/ssh/sshd_config`
-* Make changes inside the file by making PasswordaAthentication no from yes and save the file
+* Make changes inside the file by making PasswordaAthentication no 
+  from yes and save the file
 * Restart the service `sudo service ssh restart`
 
 # Changing ssh port
@@ -97,7 +104,7 @@ Linux server into the secure and efficient web application host your application
 
 # Log in using ssh key generated
 * Logout from the root and log in as grader user using
- `ssh -i <fileName>.pem grader@x.x.x.x -p 2200`
+ `ssh -i <fileName>.pub grader@x.x.x.x -p 2200`
 
 # Get into postgresql
 * `sudo su - postgres`
@@ -157,3 +164,6 @@ Linux server into the secure and efficient web application host your application
 
 # Start the apache2 server
 * `sudo service apache2 restart`
+
+## Link to my project is:
+* (ec2-52-15-235-1.us-east-2.compute.amazonaws.com)[Restaurant-Catalog]
