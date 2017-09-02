@@ -25,6 +25,7 @@ Linux server into the secure and efficient web application host your application
 # Upgrading and Updating the available package
 * `sudo apt-get update`
 * `sudo apt-get upgrade`
+* `sudo apt-get install unattended-upgrades`
 
 # Downloading Apache2, Git, Postgres, mod-wsgi
 
