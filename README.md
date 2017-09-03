@@ -167,4 +167,4 @@ Linux server into the secure and efficient web application host your application
 * `sudo service apache2 restart`
 
 ## Link to my project is:
-* (ec2-52-15-235-1.us-east-2.compute.amazonaws.com)[Restaurant-Catalog]
+* [Restaurant-Catalog](ec2-52-15-235-1.us-east-2.compute.amazonaws.com)
